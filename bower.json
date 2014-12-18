@@ -1,0 +1,24 @@
+{
+  "name": "qstring-utils",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jerball/qstring-utils",
+  "authors": [
+    "Jeremy Ball <jerball@gmail.com>"
+  ],
+  "description": "A utility library for working with querystrings",
+  "main": "public/dist/qstring.min.js",
+  "keywords": [
+    "querystring"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.7.0"
+  }
+}

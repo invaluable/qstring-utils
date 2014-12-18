@@ -1,0 +1,27 @@
+{
+  "name": "qstring-utils",
+  "version": "0.0.1",
+  "description": "A utility library for working with querystrings",
+  "main": "public/src/qstring.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jerball/qstring-utils.git"
+  },
+  "author": "jerball <jerball@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jerball/qstring-utils/issues"
+  },
+  "homepage": "https://github.com/jerball/qstring-utils",
+  "devDependencies": {
+    "browserify": "^7.0.2",
+    "exposify": "^0.2.0",
+    "gulp": "^3.8.10",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglifyjs": "^0.5.0",
+    "vinyl-transform": "^1.0.0"
+  },
+  "dependencies": {
+    "underscore": "^1.7.0"
+  }
+}
