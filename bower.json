@@ -6,7 +6,7 @@
     "Jeremy Ball <jerball@gmail.com>"
   ],
   "description": "A utility library for working with querystrings",
-  "main": "publi/dist/main.js",
+  "main": "public/dist/qstring.min.js",
   "keywords": [
     "querystring"
   ],
@@ -17,5 +17,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "underscore": "~1.7.0"
+  }
 }
