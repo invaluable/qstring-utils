@@ -1,6 +1,6 @@
 {
   "name": "qstring-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A utility library for working with querystrings",
   "main": "qstring.js",
   "repository": {
