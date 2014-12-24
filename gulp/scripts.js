@@ -17,13 +17,13 @@ module.exports = function() {
     return b.bundle();
   });
   
-  return gulp.src(['./public/src/qstring.js'])
+  return gulp.src(['./src/qstring.js'])
     .pipe(browserified)
-    .pipe(gulp.dest('./public/dist'))
+    .pipe(gulp.dest('./'))
     .pipe(uglify())
     .pipe(rename({
       extname: '.min.js'
     }))
-    .pipe(gulp.dest('./public/dist'));
+    .pipe(gulp.dest('./'));
 
 }
