@@ -2,7 +2,7 @@
   "name": "qstring-utils",
   "version": "0.0.1",
   "description": "A utility library for working with querystrings",
-  "main": "public/src/qstring.js",
+  "main": "qstring.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/jerball/qstring-utils.git"

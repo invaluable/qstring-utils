@@ -2,7 +2,7 @@
 
 var _ = require("underscore");
 
-module.exports = {
+qStringUtiils = {
 
   getQString: function( qStringKey ) {
 
@@ -46,4 +46,13 @@ module.exports = {
 
   }
 
+}
+
+if (typeof exports !== 'undefined') {
+  if (typeof module !== 'undefined' && module.exports) {
+    exports = module.exports = qStringUtiils;
+  }
+  exports.qStringUtiils = qStringUtiils;
+} else {
+  root.qStringUtiils = qStringUtiils;
 }

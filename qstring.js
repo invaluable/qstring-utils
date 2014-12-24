@@ -4,7 +4,7 @@
 
 var _ = (typeof window !== "undefined" ? window._ : typeof global !== "undefined" ? global._ : null);
 
-module.exports = {
+qStringUtiils = {
 
   getQString: function( qStringKey ) {
 
@@ -48,6 +48,15 @@ module.exports = {
 
   }
 
+}
+
+if (typeof exports !== 'undefined') {
+  if (typeof module !== 'undefined' && module.exports) {
+    exports = module.exports = qStringUtiils;
+  }
+  exports.qStringUtiils = qStringUtiils;
+} else {
+  root.qStringUtiils = qStringUtiils;
 }
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}]},{},[1]);
