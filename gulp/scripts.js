@@ -12,8 +12,10 @@ module.exports = function() {
   }
 
   var browserified = transform(function(filename) {
-    var b = browserify(filename)
-      .transform(exposify);
+    var b = browserify(filename, {
+      standalone: 'qStringUtils'
+    })
+    .transform(exposify);
     return b.bundle();
   });
   
@@ -24,6 +26,5 @@ module.exports = function() {
     .pipe(rename({
       extname: '.min.js'
     }))
-    .pipe(gulp.dest('./'));
-
+    .pipe(gulp.dest('./'))
 }
