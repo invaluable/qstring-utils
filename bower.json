@@ -1,12 +1,12 @@
 {
   "name": "qstring-utils",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "homepage": "https://github.com/jerball/qstring-utils",
   "authors": [
     "Jeremy Ball <jerball@gmail.com>"
   ],
   "description": "A utility library for working with querystrings",
-  "main": "qstring.js",
+  "main": "qstring.standalone.min.js",
   "keywords": [
     "querystring"
   ],
