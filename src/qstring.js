@@ -4,14 +4,21 @@ var _ = require("underscore");
 
 var qStringUtils = {
 
-  getQString: function( qStringKey ) {
+  getQString: function( qStringKey, options ) {
 
     var qStringSplit = "";
 
     var qStringAry = location.search.slice(1).split('&');
 
+    var caseSensitive = 
+        ( typeof options !== 'undefined' && options.hasOwnProperty( 'caseSensitive' ) ) 
+        ? options.caseSensitive 
+        : false;
+    
     var qString = _(qStringAry).find(function( qParam ){
-      var searchString = new RegExp('^' + qStringKey);
+      var searchString = ( !caseSensitive )
+          ? new RegExp('^' + qStringKey, 'i')
+          : new RegExp('^' + qStringKey);
       return searchString.test( qParam );
     });
 
