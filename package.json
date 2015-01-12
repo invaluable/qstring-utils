@@ -15,10 +15,12 @@
   "homepage": "https://github.com/jerball/qstring-utils",
   "devDependencies": {
     "browserify": "^7.0.2",
+    "chai": "^1.10.0",
     "exposify": "^0.2.0",
     "gulp": "^3.8.10",
     "gulp-rename": "^1.2.0",
     "gulp-uglifyjs": "^0.5.0",
+    "mocha": "^2.1.0",
     "vinyl-transform": "^1.0.0"
   },
   "dependencies": {
