@@ -54,18 +54,28 @@ var qStringUtils = {
 
   getRestVal: function( key ) {
 
-    var restfulPathAry = location.pathname.split('/');
+    var restfulPathAry = this.getRestfulPathArray();
 
     var keyIndex = _( restfulPathAry ).indexOf( key );
+
+    var nextElement = keyIndex++;
+
+    if (key.length === 0) {
+      return false;
+    }
 
     if (keyIndex <= 0) {
       return false;
     }
-    else if ( keyIndex++ == restfulPathAry.length ) {
+    else if ( keyIndex == restfulPathAry.length ) {
       return false;
     }
 
-    return restfulPathAry[ keyIndex++ ];
+    if (restfulPathAry.length < nextElement ) {
+      return false;
+    }
+
+    return restfulPathAry[ keyIndex ];
 
   }
 
