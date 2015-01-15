@@ -26,5 +26,8 @@
   },
   "dependencies": {
     "underscore": "^1.7.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha ./src/tests -R list -b"
   }
 }
