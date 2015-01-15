@@ -4,11 +4,23 @@ var _ = require("underscore");
 
 var qStringUtils = {
 
+  getLocationArray: function() {
+
+    return location.search.slice(1).split('&');
+
+  },
+
+  getRestfulPathArray: function() {
+
+    return location.pathname.split('/');
+
+  },
+
   getQString: function( qStringKey, options ) {
 
     var qStringSplit = "";
 
-    var qStringAry = location.search.slice(1).split('&');
+    var qStringAry = this.getLocationArray();
 
     var caseSensitive = 
         ( typeof options !== 'undefined' && options.hasOwnProperty( 'caseSensitive' ) ) 
