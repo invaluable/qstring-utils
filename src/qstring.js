@@ -34,6 +34,10 @@ var qStringUtils = {
       return searchString.test( qParam );
     });
 
+    if (qStringKey.length === 0) {
+      return false;
+    }
+
     if ( typeof qString == 'undefined') {
       return false;
     }
