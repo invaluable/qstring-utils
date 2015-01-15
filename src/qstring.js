@@ -4,11 +4,23 @@ var _ = require("underscore");
 
 var qStringUtils = {
 
+  getLocationArray: function() {
+
+    return location.search.slice(1).split('&');
+
+  },
+
+  getRestfulPathArray: function() {
+
+    return location.pathname.split('/');
+
+  },
+
   getQString: function( qStringKey, options ) {
 
     var qStringSplit = "";
 
-    var qStringAry = location.search.slice(1).split('&');
+    var qStringAry = this.getLocationArray();
 
     var caseSensitive = 
         ( typeof options !== 'undefined' && options.hasOwnProperty( 'caseSensitive' ) ) 
@@ -21,6 +33,10 @@ var qStringUtils = {
           : new RegExp('^' + qStringKey);
       return searchString.test( qParam );
     });
+
+    if (qStringKey.length === 0) {
+      return false;
+    }
 
     if ( typeof qString == 'undefined') {
       return false;
@@ -38,18 +54,28 @@ var qStringUtils = {
 
   getRestVal: function( key ) {
 
-    var restfulPathAry = location.pathname.split('/');
+    var restfulPathAry = this.getRestfulPathArray();
 
     var keyIndex = _( restfulPathAry ).indexOf( key );
+
+    var nextElement = keyIndex++;
+
+    if (key.length === 0) {
+      return false;
+    }
 
     if (keyIndex <= 0) {
       return false;
     }
-    else if ( keyIndex++ == restfulPathAry.length ) {
+    else if ( keyIndex == restfulPathAry.length ) {
       return false;
     }
 
-    return restfulPathAry[ keyIndex++ ];
+    if (restfulPathAry.length < nextElement ) {
+      return false;
+    }
+
+    return restfulPathAry[ keyIndex ];
 
   }
 
